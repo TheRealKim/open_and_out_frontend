@@ -1,0 +1,21 @@
+#rainbow{
+    background: -moz-linear-gradient(45deg, #ff0000 0%, #ff0000 4%, #ffff00 35%, #008000 53%, #0000ff 75%, #800080 97%, #800080 100%); /* ff3.6+ */
+    background: -webkit-linear-gradient(linear, left bottom, right top, color-stop(0%, #ff0000), color-stop(4%, #ff0000), color-stop(35%, #ffff00), color-stop(53%, #008000), color-stop(75%, #0000ff), color-stop(97%, #800080), color-stop(100%, #800080)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, #ff0000 0%, #ff0000 4%, #ffff00 35%, #008000 53%, #0000ff 75%, #800080 97%, #800080 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, #ff0000 0%, #ff0000 4%, #ffff00 35%, #008000 53%, #0000ff 75%, #800080 97%, #800080 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #ff0000 0%, #ff0000 4%, #ffff00 35%, #008000 53%, #0000ff 75%, #800080 97%, #800080 100%); /* ie10+ */
+    background: linear-gradient(45deg, #ff0000 0%, #ff0000 4%, #ffff00 35%, #008000 53%, #0000ff 75%, #800080 97%, #800080 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#800080', endColorstr='#ff0000',GradientType=1 ); /* ie6-9 */
+}
+
+
+#rainbow2 {
+    background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20vw;
+}

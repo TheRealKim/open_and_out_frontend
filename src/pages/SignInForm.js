@@ -6,8 +6,7 @@ class SignInForm extends Component {
         super();
 
         this.state = {
-            email: '',
-            password: ''
+            email: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -35,18 +34,15 @@ class SignInForm extends Component {
         return (
         <div className="FormCenter">
             <form onSubmit={this.handleSubmit} className="FormFields" onSubmit={this.handleSubmit}>
+            <div classname="Description">
+                <label className="FormField_Description">The Open&amp;Out team will send you a newsletter about LGBTQ topics and events once a month.<br></br>Make sure to subscribe to not miss any of the interesting updates!</label>
+            </div>
             <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
-              </div>
-
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">Password</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </div>
-
-              <div className="FormField">
-                  <button className="FormField__Button mr-20">Sign In</button> <Link to="/" className="FormField__Link">Create an account</Link>
+                <input type="email" autocomplete="off" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+            </div>
+            <div className="FormField">
+                  <button className="FormField__Button mr-20">Sign up</button> <Link to="/" className="FormField__Link">I would like to join Yammer instead</Link>
               </div>
             </form>
           </div>
