@@ -19,7 +19,7 @@ class App extends Component {
               <NavLink exact to="/pride" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Pride</NavLink>
             </div>
             <div className="FormTitle">
-              <NavLink to="/newsletter" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Newsletter</NavLink> or <NavLink to="/yammer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Yammer</NavLink> or <NavLink to="/pride" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Pride</NavLink>
+              <NavLink to="/newsletter" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Newsletter</NavLink> | <NavLink to="/yammer" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Yammer</NavLink> | <NavLink to="/pride" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Pride</NavLink>
             </div>
               
               <Route path="/yammer" component={SignUpForm}></Route>

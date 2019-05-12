@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import {ToastsContainer, ToastsStore} from 'react-toasts'; 
 
-class SignInForm extends Component {
+class PrideForm extends Component {
     constructor() {
         super();
 
@@ -38,12 +37,13 @@ class SignInForm extends Component {
                 },
                 body: JSON.stringify(this.state)
             }).then(function() {
-                ToastsStore.success("Thank you for registering!")
+                ToastsStore.success("Thank you for registering! We'll see you on Saturday.")
             }).catch(function(e){
                 ToastsStore.warning("Write to file failed. Please check if backend is up and running.");
             });
             this.setState({
-                email: ''
+                email: '',
+                tshirt: ''
             });        
         }        
     }
@@ -60,11 +60,11 @@ class SignInForm extends Component {
                 <input type="email" autoComplete="off" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
             </div>
             <div className="FormField">
-                <label className="FormField__Label" htmlFor="tshirt">E-Mail Address</label>
-                <input type="string" autoComplete="off" id="tshirt" className="FormField__Input" placeholder="Enter your Tshirt size" name="T-shirt" value={this.state.tshirt} onChange={this.handleChange} />
+                <label className="FormField__Label" htmlFor="tshirt">T-shirt Size</label>
+                <input type="String" autoComplete="off" id="tshirt" className="FormField__Input" placeholder="Enter your T-shirt size (S, M, L, XL)" name="tshirt" value={this.state.tshirt} onChange={this.handleChange} />
             </div>
             <div className="FormField">
-                  <button className="FormField__Button mr-20">Subscribe</button> <Link to="/yammer" className="FormField__Link">I would like to join Yammer instead</Link>
+                  <button className="FormField__Button mr-20">Register</button>
                   <ToastsContainer classname="FormField__Button mr-20" store={ToastsStore} position="bottom_center"/>
             </div>
             </form>
