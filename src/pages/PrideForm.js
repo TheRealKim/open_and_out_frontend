@@ -7,7 +7,8 @@ class SignInForm extends Component {
         super();
 
         this.state = {
-            email: ''
+            email: '',
+            tshirt: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -29,7 +30,7 @@ class SignInForm extends Component {
         if (this.state.email === "") {
             ToastsStore.error("Please enter a valid JnJ e-mail address");
         } else { 
-            fetch('http://localhost:3001/newsletter', {
+            fetch('http://localhost:3001/pride', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -37,7 +38,7 @@ class SignInForm extends Component {
                 },
                 body: JSON.stringify(this.state)
             }).then(function() {
-                ToastsStore.success("Thank you for signing up!")
+                ToastsStore.success("Thank you for registering!")
             }).catch(function(e){
                 ToastsStore.warning("Write to file failed. Please check if backend is up and running.");
             });
@@ -52,11 +53,15 @@ class SignInForm extends Component {
         <div className="FormCenter">
             <form onSubmit={this.handleSubmit} className="FormFields">
             <div className="Description">
-                <label className="FormField_Description">The Open&amp;Out team will send you a newsletter about LGBTQ topics and events once a month.<br></br>Make sure to subscribe to not miss any of the interesting updates!</label>
+                <label className="FormField_Description">Johnson and Johnson will participate in the Belgium Pride Parade of 2019.<br></br>Make sure to register to get all the necessary info!</label>
             </div>
             <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
                 <input type="email" autoComplete="off" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+            </div>
+            <div className="FormField">
+                <label className="FormField__Label" htmlFor="tshirt">E-Mail Address</label>
+                <input type="string" autoComplete="off" id="tshirt" className="FormField__Input" placeholder="Enter your Tshirt size" name="T-shirt" value={this.state.tshirt} onChange={this.handleChange} />
             </div>
             <div className="FormField">
                   <button className="FormField__Button mr-20">Subscribe</button> <Link to="/yammer" className="FormField__Link">I would like to join Yammer instead</Link>
@@ -68,4 +73,4 @@ class SignInForm extends Component {
     }
 }
 
-export default SignInForm;
+export default PrideForm;

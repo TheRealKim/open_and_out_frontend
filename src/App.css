@@ -59,7 +59,7 @@
 .FormTitle {
   color: #707C8B;
   font-weight: 300;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .FormTitle__Link {
@@ -81,7 +81,6 @@
 }
 .FormField_Description {
   display: block;
-  font-style: italic;
   white-space: pre-wrap;
   font-size: 1.1em;
   color: white;
@@ -118,11 +117,12 @@
 .FormField__Button {
   background-color: #DA3732;
   color: white;
+  cursor: pointer;
   border: none;
   outline: none;
   border-radius: 25px;
   padding: 15px 70px;
-  font-size: .8em;
+  font-size: .9em;
   font-weight: 500;
 }
 
